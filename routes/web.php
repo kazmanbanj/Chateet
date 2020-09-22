@@ -1,5 +1,8 @@
 <?php
 
+// this listens to any db query and dumps them
+// DB::listen(function ($query) { var_dump($query->sql, $query->bindings); });
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +20,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Route::middleware('auth')->group(function() {
+    Route::get('/chats', [App\Http\Controllers\ChatsController::class, 'index'])->name('home');
+    Route::post('/chats', [App\Http\Controllers\ChatsController::class, 'store']);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::post('/profiles/{user:username}/follow', [App\Http\Controllers\FollowsController::class, 'store']);
+    Route::get('/profiles/{user:username}/edit', [App\Http\Controllers\ProfilesController::class, 'edit']);
+    Route::patch('/profiles/{user:username}', [App\Http\Controllers\ProfilesController::class, 'update']);
+});
+
+Route::get('/profiles/{user:username}', [App\Http\Controllers\ProfilesController::class, 'show'])->name('profile');
+
+Auth::routes();
