@@ -1,11 +1,11 @@
 <x-app>
-    <header class="mb-6 relative">
-        <div class="relative">
-            <img src="/images/test.jpg" alt="" class="rounded-lg h-full mb-2" srcset="">
-            <img src="{{ $user->avatar }}" alt="" class="rounded-full mr-2 absolute bottom-0 transform -translate-x-1/2 translate-y-1/2" width="150" style="left: 50%">
+    <header class="mb-6">
+        <div class="">
+            <img src="{{ $user->avatar }}" alt="" class="rounded-lg border-none h-full mb-2 bg-gray-400 mr-auto ml-auto" style="height:300px; width: 300px; background-image: url('/images/test1.jpg'); background-size:cover">
+            <!-- <img src="{{ $user->avatar }}" alt="" class="rounded-lg mr-2 mb-8 absolute bottom-0 transform -translate-x-1/2 translate-y-1/2" width="150" style="left: 50%"> -->
         </div>
 
-        <div class="flex justify-between items-center mb-6">
+        <div class="flex justify-between items-center mb-3">
             <div>
                 <h2 class="font-bold text-2xl mb-0">{{ $user->name }}</h2>
                 <p class="text-sm">Joined {{ $user->created_at->diffForHumans() }}</p>
@@ -20,7 +20,7 @@
         </div>
 
         <div class="text-center">
-            <h3><b>Favourite Quote</b></h3>
+            <h3><b>My Favourite Quote</b></h3>
             <p class="text-sm justify-between">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis tempora in tenetur dolorem officiis! Perferendis modi maxime, aut dolores similique voluptas consequuntur fugiat ipsa, cupiditate excepturi soluta sunt officia quod.</p>
         </div>
 

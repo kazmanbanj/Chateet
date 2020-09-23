@@ -16,7 +16,7 @@ class ChatsController extends Controller
 
     public function store()
     {
-        $attributes = request()->validate(['body' => 'required|max:255']);
+        $attributes = request()->validate(['body' => 'required|max:5000']);
 
         Chat::create([
             'user_id' => auth()->id(),

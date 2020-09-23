@@ -1,4 +1,5 @@
 <x-app>
+    <h1 class="text-center text-xl font-bold">Edit Profile</h1>
     <form action="{{ $user->path() }}" method="post" enctype="multipart/form-data">
         @csrf
         @method('PATCH')
@@ -12,22 +13,22 @@
         </div>
 
         <div class="mb-6">
-                <label for="avatar" class="block mb-2 uppercase font-bold text-xs text-gray-700">Avatar</label>
-            <div class="flex">
-                <input type="file" class="border border-gray-400 p-2 w-full" name="avatar" id="avatar" value="{{ $user->avatar }}" required>
-                <img src="{{ $user->avatar }}" alt="Your Avatar" width="50">
-            </div>
-                @error('avatar')
-                    <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
-                @enderror
-        </div>
-
-        <div class="mb-6">
             <label for="username" class="block mb-2 uppercase font-bold text-xs text-gray-700">Username</label>
             <input type="text" class="border border-gray-400 p-2 w-full" name="username" id="username" value="{{ $user->username }}" required>
             @error('username')
                 <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
             @enderror
+        </div>
+
+        <div class="mb-6">
+                <label for="avatar" class="block mb-2 uppercase font-bold text-xs text-gray-700">Avatar</label>
+            <div>
+                <img src="{{ $user->avatar }}" alt="Your Avatar" width="100">
+                <input type="file" class="border border-gray-400 p-2 w-full" name="avatar" id="avatar">
+            </div>
+                @error('avatar')
+                    <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+                @enderror
         </div>
 
         <div class="mb-6">
@@ -38,7 +39,7 @@
             @enderror
         </div>
 
-        <div class="mb-6">
+        <!-- <div class="mb-6">
             <label for="password" class="block mb-2 uppercase font-bold text-xs text-gray-700">Password</label>
             <input type="password" class="border border-gray-400 p-2 w-full" name="password" id="password" required>
             @error('password')
@@ -52,7 +53,7 @@
             @error('password_confirmation')
                 <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
             @enderror
-        </div>
+        </div> -->
 
         <div class="mb-6">
             <button type="submit" class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500">

@@ -23,6 +23,7 @@ Route::get('/', function () {
 Route::middleware('auth')->group(function() {
     Route::get('/chats', [App\Http\Controllers\ChatsController::class, 'index'])->name('home');
     Route::post('/chats', [App\Http\Controllers\ChatsController::class, 'store']);
+    // Route::get('/list', [App\Http\Controllers\ChatsController::class, 'list']);
 
     Route::post('/profiles/{user:username}/follow', [App\Http\Controllers\FollowsController::class, 'store']);
     Route::get('/profiles/{user:username}/edit', [App\Http\Controllers\ProfilesController::class, 'edit']);
