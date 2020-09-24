@@ -1,14 +1,14 @@
 <div class="border border-blue-400 rounded-lg px-8 py-6 mb-6">
     <form method="POST" action="/chats">
     @csrf
-        <textarea name="body" id="" class="w-full h-24 border rounded focus:outline-none focus:shadow-outline" placeholder="What you got to share?"></textarea>
+        <textarea name="body" id="" class="w-full h-24 border rounded focus:outline-none focus:shadow-outline" placeholder="What you got to share?" required></textarea>
 
         <hr class="my-1">
 
-        <footer class="flex justify-between">
+        <footer class="flex justify-between items-center">
             <img src="{{ auth()->user()->avatar }}" alt="" class="rounded-full mr-2" style="width:50px; height:50px; background-image: url('/images/test.jpg'); background-size:cover">
 
-            <button type="submit" class="bg-green-500 py-0 px-2 text-white rounded-lg shadow">Chat it!</button>
+            <x-publish-button></x-publish-button>
         </footer>
     </form>
 

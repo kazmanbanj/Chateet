@@ -11,14 +11,15 @@ class ProfilesController extends Controller
 {
     public function show(User $user)
     {
-        return view('profiles.show', compact('user'));
+        return view('profiles.show', [
+            'user' => $user,
+            'chats' => $user->chats()->paginate(4)
+        ]);
     }
 
     public function edit(User $user)
     {
-        if (auth()->user()->isNot($user)) {
-            abort(404);
-        }
+        $this->authorize('edit', $user);
         return view('profiles.edit', compact('user'));
     }
 

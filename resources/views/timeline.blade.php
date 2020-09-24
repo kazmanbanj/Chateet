@@ -4,4 +4,5 @@
     @empty
         <p class="p-4">No chats yet</p>
     @endforelse
+
 </div>

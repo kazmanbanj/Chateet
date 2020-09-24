@@ -2,7 +2,7 @@
     <div class="flex p-4 {{ $loop->last ? '' : 'border-b border-b-gray-400' }} ">
         <div class="mr-2 flex-shrink-0">
             <a href="{{ $chat->user->path() }}">
-                <img src="{{ $chat->user->avatar }}" alt="" class="rounded-full mr-2" style="width:50px; height:50px; background-image: url('/images/test1.jpg'); background-size:cover">
+                <img src="{{ $chat->user->avatar }}" alt="" class="rounded-full mr-2" style="width:50px; height:50px;">
             </a>
         </div>
 

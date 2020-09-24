@@ -23,11 +23,11 @@ Route::get('/', function () {
 Route::middleware('auth')->group(function() {
     Route::get('/chats', [App\Http\Controllers\ChatsController::class, 'index'])->name('home');
     Route::post('/chats', [App\Http\Controllers\ChatsController::class, 'store']);
-    // Route::get('/list', [App\Http\Controllers\ChatsController::class, 'list']);
 
     Route::post('/profiles/{user:username}/follow', [App\Http\Controllers\FollowsController::class, 'store']);
-    Route::get('/profiles/{user:username}/edit', [App\Http\Controllers\ProfilesController::class, 'edit']);
-    Route::patch('/profiles/{user:username}', [App\Http\Controllers\ProfilesController::class, 'update']);
+    Route::get('/profiles/{user:username}/edit', [App\Http\Controllers\ProfilesController::class, 'edit'])->middleware('can:edit,user');
+    Route::patch('/profiles/{user:username}', [App\Http\Controllers\ProfilesController::class, 'update'])->middleware('can:edit,user');
+    Route::get('/explore', [App\Http\Controllers\ExploreController::class, 'index']);
 });
 
 Route::get('/profiles/{user:username}', [App\Http\Controllers\ProfilesController::class, 'show'])->name('profile');

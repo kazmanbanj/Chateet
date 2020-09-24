@@ -24,7 +24,7 @@ class User extends Authenticatable
 
     public function getAvatarAttribute($value)
     {
-        return asset($value);
+        return asset($value ?: '/images/test1.jpg');
     }
 
     public function timeline()
@@ -34,8 +34,7 @@ class User extends Authenticatable
         $friends->push($this->id);
 
         return Chat::whereIn('user_id', $friends)
-            ->orWhere('user_id', $this->id)
-            ->latest()->get();
+            ->orWhere('user_id', $this->id)->latest()->paginate(4);
     }
 
     public function chats()
