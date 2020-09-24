@@ -32,7 +32,7 @@
             </header>
 
             @if (auth()->check())
-            @include ('../searchbar')
+                @include ('../searchbar')
             @endif
         </section>
 

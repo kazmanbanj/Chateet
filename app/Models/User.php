@@ -34,19 +34,14 @@ class User extends Authenticatable
         $friends->push($this->id);
 
         return Chat::whereIn('user_id', $friends)
-            ->orWhere('user_id', $this->id)->latest()->paginate(4);
+            ->orWhere('user_id', $this->id)->latest()->paginate(50);
     }
 
     public function chats()
     {
         return $this->hasMany(Chat::class)->latest();
     }
-
-    // public function getRouteKeyName()
-    // {
-    //     return 'name';
-    // }
-
+    
     public function path($append = '')
     {
         $path = route('profile', $this->username);

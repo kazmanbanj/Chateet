@@ -21,14 +21,14 @@
         </div>
 
         <div class="mb-6">
-                <label for="avatar" class="block mb-2 uppercase font-bold text-xs text-gray-700">Avatar</label>
+            <label for="avatar" class="block mb-2 uppercase font-bold text-xs text-gray-700">Avatar</label>
             <div>
                 <img src="{{ $user->avatar }}" alt="Your Avatar" width="100">
                 <input type="file" class="border border-gray-400 p-2 w-full" name="avatar" id="avatar">
             </div>
-                @error('avatar')
-                    <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
-                @enderror
+            @error('avatar')
+                <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+            @enderror
         </div>
 
         <div class="mb-6">

@@ -10,7 +10,7 @@
             <a href="{{ $chat->user->path() }}">
                 <h5 class="font-bold">{{ $chat->user->name }}</h5>
             </a>
-            <h6 class="text-sm font-bold">Posted: {{ $chat->created_at->diffForHumans() }}</h6>
+            <h6 class="text-sm text-gray-600">Posted {{ $chat->created_at->diffForHumans() }}</h6>
             <p class="text-sm">{{ $chat->body }}</p>
         </div>
     </div>

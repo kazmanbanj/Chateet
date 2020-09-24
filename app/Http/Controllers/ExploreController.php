@@ -11,7 +11,7 @@ class ExploreController extends Controller
     public function index()
     {
         return view('explore', [
-            'users' => User::paginate(2)
+            'users' => User::paginate(50)
         ]);
     }
 }
