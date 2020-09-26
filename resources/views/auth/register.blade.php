@@ -1,6 +1,6 @@
 <x-master>
 <div class="container mx-auto flex justify-center">
-    <div class="px-12 py-4 bg-gray-200 border-gray-400 rounded-lg">
+    <div class="px-10 py-4 bg-gray-200 border-gray-400 rounded-lg">
         <div class="col-md-8">
                 <div class="font-bold text-lg mb-2 text-center text-gray-700">{{ __('Register') }}</div>
 
@@ -22,7 +22,7 @@
                         </div> -->
                         <div class="mb-3">
                             <label for="name" class="block mb-1 uppercase font-bold text-xs text-gray-700">{{ __('Full Name') }}</label>
-                            <input type="text" name="name" id="name" class="border border-gray-400 p-2 w-64" autocomplete="name" value="{{ old('name') }}" required autofocus>
+                            <input type="text" name="name" id="name" class="border border-gray-400 p-2 w-full" autocomplete="name" value="{{ old('name') }}" required autofocus>
 
                             @error('name')
                                 <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
@@ -120,6 +120,10 @@
                         </div> -->
                         <div class="text-center">
                             <button type="submit" class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500 mr-2">{{ __('Register') }}</button>
+                        </div>
+
+                        <div class="text-center">
+                            <p>Already have an account? <span><a href="{{ route('login') }}">Login</a></span></p>
                         </div>
                     </form>
         </div>

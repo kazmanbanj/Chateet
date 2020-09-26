@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Chat;
+use App\Http\Controllers\Controller;
 
 class ChatsController extends Controller
 {
@@ -10,7 +11,7 @@ class ChatsController extends Controller
     {
         // this is to ensure we have chats by people we follow
         return view('chats.index', [
-            'chats' => auth()->user()->timeline()
+            'chats' => auth()->user()->timeline(),
         ]);
     }
 

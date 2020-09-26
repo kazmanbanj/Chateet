@@ -6,5 +6,4 @@
         <!-- for timeline -->
         @include ('timeline')
     </div>
-    {{ $chats->links() }}
 </x-app>

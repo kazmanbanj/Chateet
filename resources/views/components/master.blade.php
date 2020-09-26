@@ -21,9 +21,9 @@
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 </head>
 
-<body>
+<body class="mb-5">
     <div id="app">
-        <section class="px-8 py-4 mb-4 flex">
+        <section class="px-8 py-4 mb-2 flex">
             <header class="container mx-auto">
                 <h1 class="flex">
                     <img src="/images/test.ico" alt="Chattar">
@@ -40,4 +40,7 @@
     </div>
 </body>
 
+<footer class="text-center mt-4">
+    Chattar - CopyRight &copy; 2020 - {{date('Y')}}. All rights reserved
+</footer>
 </html>

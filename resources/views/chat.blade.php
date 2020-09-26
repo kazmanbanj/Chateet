@@ -11,7 +11,12 @@
                 <h5 class="font-bold">{{ $chat->user->name }}</h5>
             </a>
             <h6 class="text-sm text-gray-600">Posted {{ $chat->created_at->diffForHumans() }}</h6>
-            <p class="text-sm">{{ $chat->body }}</p>
+            <p class="text-sm mb-3">{{ $chat->body }}</p>
+
+            <!-- zondicon icons here -->
+            @auth
+                <x-like-buttons :chat="$chat" />
+            @endauth
         </div>
     </div>
 </div>

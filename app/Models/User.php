@@ -34,12 +34,17 @@ class User extends Authenticatable
         $friends->push($this->id);
 
         return Chat::whereIn('user_id', $friends)
-            ->orWhere('user_id', $this->id)->latest()->paginate(50);
+            ->orWhere('user_id', $this->id)->latest()->withLikes()->orderByDesc('id')->paginate(15);
     }
 
     public function chats()
     {
         return $this->hasMany(Chat::class)->latest();
+    }
+
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
     }
     
     public function path($append = '')
