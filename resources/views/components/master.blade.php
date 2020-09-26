@@ -27,7 +27,6 @@
             <header class="container mx-auto">
                 <h1 class="flex">
                     <img src="/images/test.ico" alt="Chattar">
-                    Chattar
                 </h1>
             </header>
 

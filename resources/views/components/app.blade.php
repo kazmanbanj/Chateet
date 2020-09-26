@@ -7,11 +7,6 @@
                 <div>
                     <div class="lg:w-32 sticky top-0">
                         <header class="container mx-auto py-3">
-                            <!-- <h1>
-                                <a href="{{ route('home') }}" class="flex">
-                                    <img src="/images/test.ico" alt="Chattar">
-                                    Chattar</a>
-                            </h1><br> -->
                             @include ('sidebar_links')
                         </header>
                     </div>

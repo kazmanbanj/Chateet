@@ -19,12 +19,12 @@
         </div>
 
         <div class="text-center">
-            <h3><b>My Favourite Quote</b></h3>
-            <p class="text-sm justify-between">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis tempora in tenetur dolorem officiis! Perferendis modi maxime, aut dolores similique voluptas consequuntur fugiat ipsa, cupiditate excepturi soluta sunt officia quod.</p>
+            <h3><b class="text-gray-600">My Favourite Quote</b></h3>
+            <p class="text-sm justify-between text-gray-600">{{ $user->quote }}</p>
         </div>
     </header>
 
-    <hr>
+    <hr class="mb-3">
     @include ('timeline', [
         'chats' => $chats
     ])

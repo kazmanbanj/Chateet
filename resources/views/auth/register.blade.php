@@ -121,11 +121,10 @@
                         <div class="text-center">
                             <button type="submit" class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500 mr-2">{{ __('Register') }}</button>
                         </div>
-
-                        <div class="text-center">
-                            <p>Already have an account? <span><a href="{{ route('login') }}">Login</a></span></p>
-                        </div>
                     </form>
+                        <div class="text-center mt-4">
+                            <p>Already have an account? <span><a href="{{ route('login') }}">Login here</a></span></p>
+                        </div>
         </div>
     </div>
 </div>

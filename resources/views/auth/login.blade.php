@@ -89,6 +89,9 @@
                         @endif
                     </div>
                 </form>
+                    <div class="text-center mt-4">
+                        <p>Don't have an account? <span><a href="{{ route('register') }}">Register here</a></span></p>
+                    </div>
             </div>
         </div>
     </div>
