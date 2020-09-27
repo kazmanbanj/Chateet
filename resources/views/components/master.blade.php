@@ -29,6 +29,10 @@
                     <img src="/images/test.ico" alt="Chateet">
                 </h1>
             </header>
+
+            <!-- @if (auth()->check())
+                @include ('../searchbar')
+            @endif -->
         </section>
 
         {{ $slot }}
