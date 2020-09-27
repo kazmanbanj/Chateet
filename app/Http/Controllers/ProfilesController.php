@@ -34,7 +34,7 @@ class ProfilesController extends Controller
             'name' => ['string', 'required', 'max:255'],
             'avatar' => ['image', 'dimensions:min_width=100, min_height=200'],
             'email' => ['string', 'required', 'email', 'max:255', Rule::unique('users')->ignore($user)],
-            'quote' => ['string', 'max:255'],
+            'quote' => ['max:255'],
             // 'password' => ['string', 'required', 'min:8', 'max:255', 'confirmed'],
         ]);
 

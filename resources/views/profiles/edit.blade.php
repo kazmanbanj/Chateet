@@ -50,10 +50,7 @@
         <div class="mb-6">
             <label for="quote" class="block mb-2 uppercase font-bold text-xs text-gray-700">Favourite Quote</label>
             <!-- <input type="text" class="border border-gray-400 p-2 w-full" name="quote" id="quote" value="{{ $user->quote }}" required> -->
-            <input name="quote" id="quote" class="w-full h-24 border border-gray-400 rounded" value="{{ $user->quote }}"></input>
-            @error('quote')
-                <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
-            @enderror
+            <input name="quote" id="quote" class="w-full h-24 border border-gray-400 rounded" value="{{ $user->quote }}">
         </div>
         
         <div class="mb-6">
