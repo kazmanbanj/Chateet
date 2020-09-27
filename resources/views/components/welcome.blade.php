@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Chattar</title>
+    <title>Chateet</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -16,8 +16,8 @@
         <section class="px-8 py-4 mb-4 flex">
             <header class="container mx-auto">
                 <h1 class="flex">
-                    <img src="/images/test.ico" alt="Chattar">
-                    Chattar
+                    <img src="/images/test.ico" alt="Chateet">
+                    Chateet
                 </h1>
             </header>
         </section>

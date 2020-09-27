@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Chattar</title>
+    <title>Chateet</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -26,7 +26,7 @@
         <section class="px-8 py-4 mb-2 flex">
             <header class="container mx-auto">
                 <h1 class="flex">
-                    <img src="/images/test.ico" alt="Chattar">
+                    <img src="/images/test.ico" alt="Chateet">
                 </h1>
             </header>
 
@@ -40,6 +40,6 @@
 </body>
 
 <footer class="text-center mt-4">
-    Chattar - CopyRight &copy; 2020 - {{date('Y')}}. All rights reserved
+    Chateet - CopyRight &copy; 2020 - {{date('Y')}} Banjoko Kazeem. All rights reserved
 </footer>
 </html>
