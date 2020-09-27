@@ -26,7 +26,7 @@
         <section class="px-8 py-4 mb-2 flex">
             <header class="container mx-auto">
                 <h1 class="flex">
-                    <img src="/images/test.ico" alt="Chateet">
+                    <img src="/images/test1.ico" alt="Chateet">
                 </h1>
             </header>
 
