@@ -4,10 +4,14 @@
             <img src="{{ $user->avatar }}" alt="" class="rounded-lg border-none h-full mb-2 bg-gray-400 mr-auto ml-auto" style="height:300px; width: 300px;">
         </div>
 
-        <div class="flex justify-between items-center mb-3">
-            <div style="max-width:250px">
-                <h2 class="font-bold text-2xl mb-0">{{ $user->name }}</h2>
-                <p class="text-sm">Joined {{ $user->created_at->diffForHumans() }}</p>
+        <div class="justify-between items-center mb-3 p-5 pt-0">
+            <div class="mb-3">
+                <h2 class="font-bold text-2xl mb-0 text-center">{{ $user->username }}'s profile</h2>
+                <h4 class="text-sm">Name - {{ $user->name }}</h4><hr>
+                <p class="text-sm">Time Joined - {{ $user->created_at->diffForHumans() }}</p><hr>
+                <!-- <p class="text-sm">{{ $user->birthday ? 'Birthday - ' . $user->birthday : '' }}</p> -->
+                <p class="text-sm">{{ $user->gender ? 'Gender - ' . $user->gender : '' }}</p><hr>
+                <p class="text-sm">{{ $user->quote ? 'My Favourite Quote - ' . $user->quote : '' }}</p>
             </div>
 
             <div class="flex">
@@ -16,11 +20,6 @@
                 @endcan
                 <x-follow-button :user="$user"></x-follow-button>
             </div>
-        </div>
-
-        <div class="text-center">
-            <h3><b class="text-gray-600">My Favourite Quote</b></h3>
-            <p class="text-sm justify-between text-gray-600">{{ $user->quote }}</p>
         </div>
     </header>
 
