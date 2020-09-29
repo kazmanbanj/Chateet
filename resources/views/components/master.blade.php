@@ -40,6 +40,6 @@
 </body>
 
 <footer class="text-center mt-4">
-    Chateet - CopyRight &copy; 2020 - {{date('Y')}} Banjoko Kazeem. All rights reserved
+    Chateet - CopyRight &copy; 2020 Banjoko Kazeem. All rights reserved
 </footer>
 </html>

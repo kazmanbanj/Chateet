@@ -54,6 +54,9 @@
         <div class="mb-6">
             <label for="quote" class="block mb-2 uppercase font-bold text-xs text-gray-700">Favourite Quote</label>
             <input name="quote" id="quote" class="w-full h-24 border border-gray-400 rounded" value="{{ $user->quote }}">
+            @error('quote')
+                <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+            @enderror
         </div>
         
         <div class="mb-6">
