@@ -35,9 +35,7 @@ class ProfilesController extends Controller
             'gender' => ['in:male,female'],
             // 'birthday' => ['date_format:D-M-Y|before:today'],
             'avatar' => ['image', 'dimensions:min_width=100, min_height=200'],
-            // 'email' => ['string', 'required', 'email', 'max:255', Rule::unique('users')],
             'quote' => ['max:255'],
-            // 'password' => ['string', 'required', 'min:8', 'max:255', 'confirmed'],
         ]);
 
         if(request('avatar')) {

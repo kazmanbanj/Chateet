@@ -23,9 +23,9 @@
         <div class="mb-6">
             <label for="gender" class="block mb-2 uppercase font-bold text-xs text-gray-700">Gender</label>
             <select name="gender" id="gender" required>
-                <option value="">choose</option>
-                <option value="male">male</option>
-                <option value="female">female</option>
+                <!-- <option value="">choose</option> -->
+                <option value="male" @if($user->gender=='male') selected='selected' @endif>male</option>
+                <option value="female" @if($user->gender=='female') selected='selected' @endif>female</option>
             </select>
             @error('gender')
                 <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
