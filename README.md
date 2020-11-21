@@ -1,3 +1,3 @@
 # https://chateet.herokuapp.com/
 
-![Profile views](https://gpvc.arturio.dev/kazmanbanj)
+![Profile views](https://gpvc.arturio.dev/kazmanbanj/Chateet)
