@@ -3,7 +3,14 @@
 // this listens to any db query and dumps them
 // DB::listen(function ($query) { var_dump($query->sql, $query->bindings); });
 
+// use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ChatsController;
+use App\Http\Controllers\ExploreController;
+use App\Http\Controllers\FollowsController;
+use App\Http\Controllers\ProfilesController;
+use App\Http\Controllers\ChatLikesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,22 +28,21 @@ Route::get('/', function () {
 });
 
 Route::middleware('auth')->group(function() {
-    Route::get('/chats', [App\Http\Controllers\ChatsController::class, 'index'])->name('home');
-    Route::post('/chats', [App\Http\Controllers\ChatsController::class, 'store']);
+    Route::get('/chats', [ChatsController::class, 'index'])->name('home');
+    Route::post('/chats', [ChatsController::class, 'store']);
 
-    Route::post('/chats/{chat}/like', [App\Http\Controllers\ChatLikesController::class, 'store']);
-    Route::delete('/chats/{chat}/like', [App\Http\Controllers\ChatLikesController::class, 'destroy']);
+    Route::post('/chats/{chat}/like', [ChatLikesController::class, 'store']);
+    Route::delete('/chats/{chat}/like', [ChatLikesController::class, 'destroy']);
     
-    Route::post('/profiles/{user:username}/follow', [App\Http\Controllers\FollowsController::class, 'store'])->name('follow');
+    Route::post('/profiles/{user:username}/follow', [FollowsController::class, 'store'])->name('follow');
     
-    Route::get('/profiles/{user:username}/edit', [App\Http\Controllers\ProfilesController::class, 'edit'])->middleware('can:edit,user');
-    Route::patch('/profiles/{user:username}', [App\Http\Controllers\ProfilesController::class, 'update'])->middleware('can:edit,user');
-    Route::get('/profiles/{user:username}', [App\Http\Controllers\ProfilesController::class, 'show'])->name('profile');
+    Route::get('/profiles/{user:username}/edit', [ProfilesController::class, 'edit'])->middleware('can:edit,user');
+    Route::patch('/profiles/{user:username}', [ProfilesController::class, 'update'])->middleware('can:edit,user');
+    Route::get('/profiles/{user:username}', [ProfilesController::class, 'show'])->name('profile');
 
 
 
-    Route::get('/explore', [App\Http\Controllers\ExploreController::class, 'index']);
+    Route::get('/explore', [ExploreController::class, 'index']);
 });
-
 
 Auth::routes();
