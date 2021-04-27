@@ -5237,3 +5237,27 @@
 [stacktrace]
 #0 {main}
 "} 
+[2021-04-27 10:34:39] local.ERROR: Cannot redeclare current_user() (previously declared in C:\Users\HP\Documents\FOFX\laravel\Chateet\app\helpers.php:5) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare current_user() (previously declared in C:\\Users\\HP\\Documents\\FOFX\\laravel\\Chateet\\app\\helpers.php:5) at C:\\Users\\HP\\Documents\\FOFX\\laravel\\Chateet\\app\\helpers.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2021-04-27 10:35:40] local.ERROR: Cannot redeclare current_user() (previously declared in C:\Users\HP\Documents\FOFX\laravel\Chateet\app\helpers.php:5) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare current_user() (previously declared in C:\\Users\\HP\\Documents\\FOFX\\laravel\\Chateet\\app\\helpers.php:5) at C:\\Users\\HP\\Documents\\FOFX\\laravel\\Chateet\\app\\helpers.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2021-04-27 10:36:39] local.ERROR: Cannot redeclare current_user() (previously declared in C:\Users\HP\Documents\FOFX\laravel\Chateet\app\helpers.php:5) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare current_user() (previously declared in C:\\Users\\HP\\Documents\\FOFX\\laravel\\Chateet\\app\\helpers.php:5) at C:\\Users\\HP\\Documents\\FOFX\\laravel\\Chateet\\app\\helpers.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2021-04-27 10:37:39] local.ERROR: Cannot redeclare current_user() (previously declared in C:\Users\HP\Documents\FOFX\laravel\Chateet\app\helpers.php:5) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare current_user() (previously declared in C:\\Users\\HP\\Documents\\FOFX\\laravel\\Chateet\\app\\helpers.php:5) at C:\\Users\\HP\\Documents\\FOFX\\laravel\\Chateet\\app\\helpers.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2021-04-27 10:38:39] local.ERROR: Cannot redeclare current_user() (previously declared in C:\Users\HP\Documents\FOFX\laravel\Chateet\app\helpers.php:5) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare current_user() (previously declared in C:\\Users\\HP\\Documents\\FOFX\\laravel\\Chateet\\app\\helpers.php:5) at C:\\Users\\HP\\Documents\\FOFX\\laravel\\Chateet\\app\\helpers.php:6)
+[stacktrace]
+#0 {main}
+"} 
+[2021-04-27 10:39:40] local.ERROR: Cannot redeclare current_user() (previously declared in C:\Users\HP\Documents\FOFX\laravel\Chateet\app\helpers.php:5) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare current_user() (previously declared in C:\\Users\\HP\\Documents\\FOFX\\laravel\\Chateet\\app\\helpers.php:5) at C:\\Users\\HP\\Documents\\FOFX\\laravel\\Chateet\\app\\helpers.php:6)
+[stacktrace]
+#0 {main}
+"} 
