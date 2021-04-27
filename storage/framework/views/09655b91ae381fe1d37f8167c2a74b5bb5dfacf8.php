@@ -58,7 +58,7 @@ endif;
 unset($__errorArgs, $__bag); ?>
         </div>
 
-        <div class="mb-6">
+        <!-- <div class="mb-6">
             <label for="birthday" class="block mb-2 uppercase font-bold text-xs text-gray-700">Birthday</label>
             <input type="date" class="border border-gray-400 p-2 w-full" name="birthday" id="birthday" value="<?php echo e($user->birthday); ?>">
             <?php $__errorArgs = ['birthday'];
@@ -71,12 +71,12 @@ $message = $__bag->first($__errorArgs[0]); ?>
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
-        </div>
+        </div> -->
 
         <div class="mb-6">
             <label for="avatar" class="block mb-2 uppercase font-bold text-xs text-gray-700">Avatar</label>
             <div>
-                <img src="<?php echo e($user->avatar); ?>" alt="Your Avatar" width="100">
+                <img src="<?php echo URL::asset('avatars/'. $user->id .'/'. str_replace('http://127.0.0.1:8000/', '', $user->avatar)); ?>" alt="<?php echo e($user->username); ?>'s avatar" width="100">
                 <input type="file" class="border border-gray-400 p-2 w-full" name="avatar" id="avatar">
             </div>
             <?php $__errorArgs = ['avatar'];

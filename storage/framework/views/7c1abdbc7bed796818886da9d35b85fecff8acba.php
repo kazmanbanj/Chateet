@@ -8,7 +8,7 @@
 
     <div class="sm:flex mb-4 border border-gray-400 rounded">
         <a href="<?php echo e($user->path()); ?>" class="flex items-center p-3">
-            <img src="<?php echo e($user->avatar); ?>" alt="<?php echo e($user->username); ?>'s avatar" width="60" class="mr-4 rounded">
+            <img src="<?php echo URL::asset('avatars/'. $user->id .'/'. str_replace('http://127.0.0.1:8000/', '', $user->avatar)); ?>" alt="<?php echo e($user->username); ?>'s avatar" width="60" class="mr-4 rounded">
 
             <div>
                 <h4 class="font-bold"><?php echo e('@' . $user->username); ?></h4>
