@@ -2,7 +2,7 @@
     <div class="flex p-4 <?php echo e($loop->last ? '' : 'border-b border-b-gray-400'); ?> ">
         <div class="mr-2 flex-shrink-0">
             <a href="<?php echo e($chat->user->path()); ?>">
-                <img src="<?php echo URL::asset('avatars/'. $chat->user->id .'/'. str_replace('http://127.0.0.1:8000/', '', $chat->user->avatar)); ?>" alt="<?php echo e($chat->user->name); ?>'s avatar" class="rounded-full mr-2" style="width:50px; height:50px;">
+                <img src="<?php echo URL::asset('avatars/'. $chat->user->id .'/'. str_replace('http://chateet.herokuapp.com/', '', $chat->user->avatar)); ?>"  class="rounded-full mr-2" style="width:50px; height:50px;">
             </a>
         </div>
 

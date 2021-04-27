@@ -54,7 +54,9 @@ drift.load('neybfrizwi22');
         <section class="px-8 py-4 mb-2 flex">
             <header class="container mx-auto">
                 <h1 class="flex">
-                    <img src="/images/test.ico" alt="Chateet">
+                    <a href="<?php echo e(route('home')); ?>">
+                      <img src="/images/test.ico" alt="Chateet">
+                      </a>
                 </h1>
             </header>
 

@@ -5,7 +5,7 @@
     <li class="<?php echo e($loop->last ? '' : 'mb-4'); ?>">
         <div>
             <a href="<?php echo e(route('profile', $user)); ?>" class="flex items-center text-sm">
-                <img src="<?php echo URL::asset('avatars/'. $user->id .'/'. str_replace('http://127.0.0.1:8000/', '', $user->avatar)); ?>" alt="<?php echo e($user->username); ?>'s avatar" class="mr-2" style="background-image: url('/images/test1.jpg'); background-size:cover;width:40px; height:30px;">
+                <img src="<?php echo URL::asset('avatars/'. $user->id .'/'. str_replace('http://chateet.herokuapp.com/', '', $user->avatar)); ?>" class="mr-2" style="background-image: url('/images/test1.jpg'); background-size:cover;width:40px; height:30px;">
                 <p class="break-all"><?php echo e($user->name); ?></p>
             </a>
         </div>

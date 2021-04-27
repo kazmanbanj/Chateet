@@ -16,7 +16,9 @@
         <section class="px-8 py-4 mb-4 flex">
             <header class="container mx-auto">
                 <h1 class="flex">
-                    <img src="/images/test.ico" alt="Chateet">
+                    <a href="{{ route('home') }}">
+                        <img src="/images/test.ico" alt="Chateet">
+                    </a> 
                     Chateet
                 </h1>
             </header>

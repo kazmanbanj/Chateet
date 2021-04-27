@@ -6,7 +6,7 @@
 <?php $component->withAttributes([]); ?>
     <header class="mb-6">
         <div class="">
-            <img src="<?php echo URL::asset('avatars/'. $user->id .'/'. str_replace('http://127.0.0.1:8000/', '', $user->avatar)); ?>" alt="<?php echo e($user->username); ?>'s avatar" class="rounded-lg border-none h-full mb-2 bg-gray-400 mr-auto ml-auto" style="height:300px; width: 300px;">
+            <img src="<?php echo URL::asset('avatars/'. $user->id .'/'. str_replace('http://chateet.herokuapp.com/', '', $user->avatar)); ?> "class="rounded-lg border-none h-full mb-2 bg-gray-400 mr-auto ml-auto" style="height:300px; width: 300px;">
         </div>
 
         <div class="justify-between items-center mb-3 p-5 pt-0">

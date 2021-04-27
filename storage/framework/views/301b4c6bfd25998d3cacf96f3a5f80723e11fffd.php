@@ -6,7 +6,7 @@
         <hr class="my-1">
 
         <footer class="flex justify-between items-center">
-            <img src="<?php echo URL::asset('avatars/'. auth()->user()->id .'/'. str_replace('http://127.0.0.1:8000/', '', auth()->user()->avatar)); ?>" alt="<?php echo e(auth()->user()->name); ?>'s avatar" class="rounded-full mr-2" style="width:50px; height:50px; background-image: url('/images/test.jpg'); background-size:cover">
+            <img src="<?php echo URL::asset('avatars/'. auth()->user()->id .'/'. str_replace('http://chateet.herokuapp.com/', '', auth()->user()->avatar)); ?>" class="rounded-full mr-2" style="width:50px; height:50px; background-image: url('/images/test.jpg'); background-size:cover">
 
             <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.publish-button','data' => []]); ?>
