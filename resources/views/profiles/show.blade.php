@@ -1,7 +1,7 @@
 <x-app>
     <header class="mb-6">
         <div class="">
-            <img src="{{ $user->avatar }}" alt="" class="rounded-lg border-none h-full mb-2 bg-gray-400 mr-auto ml-auto" style="height:300px; width: 300px;">
+            <img src="avatars/3/{{ $user->avatar}} " alt="" class="rounded-lg border-none h-full mb-2 bg-gray-400 mr-auto ml-auto" style="height:300px; width: 300px;">
         </div>
 
         <div class="justify-between items-center mb-3 p-5 pt-0">

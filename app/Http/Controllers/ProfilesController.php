@@ -23,7 +23,7 @@ class ProfilesController extends Controller
         return view('profiles.edit', compact('user'));
     }
 
-    public function update(User $user)
+    public function update(Request $request, User $user)
     {
         if (auth()->user()->isNot($user)) {
             abort(404);
@@ -33,16 +33,23 @@ class ProfilesController extends Controller
             'username' => ['string', 'required', 'max:255', 'alpha_dash', Rule::unique('users')->ignore($user)],
             'name' => ['string', 'required', 'max:255'],
             'gender' => ['in:male,female'],
-            // 'birthday' => ['date_format:D-M-Y|before:today'],
+            // 'birthday' => ['before:today'],
             'avatar' => ['image', 'dimensions:min_width=100, min_height=200'],
             'quote' => ['max:255'],
         ]);
 
-        if(request('avatar')) {
-            $attributes['avatar'] = request('avatar')->store('avatars');
+        if($request->hasFile('avatar')) {
+            $file = $request->file('avatar');
+            $filename = $file->getClientOriginalName();
+            $file->storeAs('avatars/' . $user->id, $filename, 'public');
+            $user->update([
+                'avatar' => $filename,
+            ]);
+
+            // $attributes['avatar'] = request('avatar')->store('avatars');
         }
 
-        $user->update($attributes);
+        // $user->update($attributes);
 
         return redirect($user->path());
     }
