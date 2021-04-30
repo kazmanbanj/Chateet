@@ -42,9 +42,10 @@ class ProfilesController extends Controller
             $file = $request->file('avatar');
             $filename = $file->getClientOriginalName();
             $file->storeAs('avatars/' . $user->id, $filename, 'public');
-            $user->update([
-                'avatar' => $filename,
-            ]);
+            // $user->update([
+            //     'avatar' => $filename,
+            // ]);
+            $attributes['avatar'] = $filename;
 
             // $attributes['avatar'] = request('avatar')->store('avatars');
         }
