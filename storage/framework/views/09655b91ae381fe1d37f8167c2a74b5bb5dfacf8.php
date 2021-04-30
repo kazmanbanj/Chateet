@@ -76,7 +76,7 @@ unset($__errorArgs, $__bag); ?>
         <div class="mb-6">
             <label for="avatar" class="block mb-2 uppercase font-bold text-xs text-gray-700">Avatar</label>
             <div>
-                <img src="<?php echo URL::asset('avatars/'. $user->id .'/'. str_replace('http://chateet.herokuapp.com/', '', $user->avatar)); ?>" width="100">
+                <img src="<?php echo URL::asset('avatars/'. $user->id .'/'. str_replace('http://127.0.0.1:8000/', '', $user->avatar)); ?>" width="100">
                 <input type="file" class="border border-gray-400 p-2 w-full" name="avatar" id="avatar">
             </div>
             <?php $__errorArgs = ['avatar'];
