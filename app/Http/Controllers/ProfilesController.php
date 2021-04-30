@@ -49,7 +49,7 @@ class ProfilesController extends Controller
             // $attributes['avatar'] = request('avatar')->store('avatars');
         }
 
-        // $user->update($attributes);
+        $user->update($attributes);
 
         return redirect($user->path());
     }
