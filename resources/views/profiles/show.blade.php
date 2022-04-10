@@ -7,10 +7,15 @@
         <div class="justify-between items-center mb-3 p-5 pt-0">
             <div class="mb-3">
                 <h2 class="font-bold text-2xl mb-0 text-center break-all">{{ $user->username }}'s profile</h2>
+
                 <h4 class="text-sm break-all">Name - {{ $user->name }}</h4><hr>
+
                 <p class="text-sm">Time Joined - {{ $user->created_at->diffForHumans() }}</p><hr>
+
                 <!-- <p class="text-sm">{{ $user->birthday ? 'Birthday - ' . $user->birthday : '' }}</p> -->
+
                 <p class="text-sm">{{ $user->gender ? 'Gender - ' . $user->gender : '' }}</p><hr>
+                
                 <p class="text-sm break-all">{{ $user->quote ? 'My Favourite Quote - ' . $user->quote : '' }}</p>
             </div>
 
