@@ -11,7 +11,7 @@
         </a>
         <div class="lg:ml-auto md:ml-auto xl:ml-auto sm:ml-auto p-3">
             <button type="submit"><a class="bg-green-500 text-xs py-2 px-2 text-white rounded-full shadow" href="{{ $user->path() }}">View Profile</a></button>
-            
+
             <x-follow-button :user="$user"></x-follow-button>
         </div>
     </div>
