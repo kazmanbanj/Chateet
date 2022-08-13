@@ -64,7 +64,6 @@ drift.load('neybfrizwi22');
                 @include ('../searchbar')
             @endif -->
         </section>
-
         {{ $slot }}
     </div>
 </body>
