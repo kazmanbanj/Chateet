@@ -3,7 +3,8 @@
 
     <div class="sm:flex mb-4 border border-gray-400 rounded">
         <a href="{{ $user->path() }}" class="flex items-center p-3">
-            <img src="{!! URL::asset('avatars/'. $user->id .'/'. str_replace('http://chateet.herokuapp.com/', '', $user->avatar)) !!}" width="60" class="mr-4 rounded">
+            {{--URL::asset('avatars/'. $user->id .'/'. str_replace('http://chateet.herokuapp.com/', '', --}}
+            <img src="{!! $user->avatar !!}" width="60" class="mr-4 rounded">
 
             <div>
                 <h4 class="font-bold">{{ '@' . $user->username }}</h4>
