@@ -13,26 +13,25 @@ class User extends Authenticatable
     use Notifiable, Followable;
 
     protected $guarded = [];
-
+    
     protected $hidden = [
         'password', 'remember_token',
     ];
-
+    
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
 
-    // public function getAvatarAttribute($value)
-    // {
-    //     return asset($value ?: '/images/test1.jpg');
-    // }
+    public function getAvatarAttribute($value)
+    {
+        return asset($value ?: '/images/test1.jpg');
+    }
 
     public function timeline()
     {
-        // return Chat::where('user_id', $this->id)->latest()->get();
         $friends = $this->follows()->pluck('id');
         $friends->push($this->id);
-
+        // dd($friends);
         return Chat::whereIn('user_id', $friends)
             ->orWhere('user_id', $this->id)->latest()->withLikes()->orderByDesc('id')->paginate(15);
     }
@@ -46,10 +45,15 @@ class User extends Authenticatable
     {
         return $this->hasMany(Like::class);
     }
-
+    
     public function path($append = '')
     {
         $path = route('profile', $this->username);
         return $append ? "{$path}/{$append}" : $path;
+    }
+
+    public function getIsAdminAttribute()
+    {
+        return $this->where('is_admin', 1)->exists();
     }
 }

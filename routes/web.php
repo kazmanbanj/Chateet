@@ -11,6 +11,7 @@ use App\Http\Controllers\ExploreController;
 use App\Http\Controllers\FollowsController;
 use App\Http\Controllers\ProfilesController;
 use App\Http\Controllers\ChatLikesController;
+use App\Http\Controllers\NotificationsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +44,11 @@ Route::middleware('auth')->group(function() {
 
 
     Route::get('/explore', [ExploreController::class, 'index']);
+
+
+    Route::get('notifications', [NotificationsController::class, 'index']);
+    Route::post('/mark-as-read', [NotificationsController::class, 'markNotification'])->name('markNotification');
+    Route::get('ReadNotification/{id}',[NotificationsController::class, 'ReadNotification'])->name('ReadNotification');
 });
 
 Auth::routes();

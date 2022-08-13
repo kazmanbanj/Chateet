@@ -5,9 +5,7 @@
     <li class="{{$loop->last ? '' : 'mb-4'}}">
         <div>
             <a href="{{ route('profile', $user) }}" class="flex items-center text-sm">
-                {{--URL::asset('avatars/'. $user->id .'/'. str_replace('http://chateet.herokuapp.com/', '',
-                style="background-image: url('/images/test1.jpg'); background-size:cover;width:40px; height:30px;" --}}
-                <img src="{!! $user->avatar ?? URL::asset('images/test1.jpg') !!}" class="mr-2">
+                <img src="{!! URL::asset('avatars/'. $user->id .'/'. str_replace('http://chateet.herokuapp.com/', '', $user->avatar)) !!}" class="mr-2" style="background-image: url('/images/test1.jpg'); background-size:cover;width:40px; height:30px;">
                 <p class="break-all">{{ $user->name }}</p>
             </a>
         </div>

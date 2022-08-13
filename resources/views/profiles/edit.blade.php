@@ -43,8 +43,7 @@
         <div class="mb-6">
             <label for="avatar" class="block mb-2 uppercase font-bold text-xs text-gray-700">Avatar</label>
             <div>
-                {{--  URL::asset('avatars/'. $user->id .'/'. str_replace('http://127.0.0.1:8000/', '',  --}}
-                <img src="{!!  $user->avatar ?? URL::asset('images/test1.jpg')  !!}" width="100">
+                <img src="{!! URL::asset('avatars/'. $user->id .'/'. str_replace('http://127.0.0.1:8000/', '', $user->avatar)) !!}" width="100">
                 <input type="file" class="border border-gray-400 p-2 w-full" name="avatar" id="avatar">
             </div>
             @error('avatar')

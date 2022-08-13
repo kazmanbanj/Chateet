@@ -9,10 +9,9 @@ class ChatsController extends Controller
 {
     public function index()
     {
-        // this is to ensure we have chats by people we follow
-        return view('chats.index', [
-            'chats' => auth()->user()->timeline(),
-        ]);
+        $chats = auth()->user()->timeline();
+            // this is to ensure we have chats by people we follow
+        return view('chats.index', compact('chats'));
     }
 
     public function store()
