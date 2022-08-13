@@ -6,6 +6,7 @@
 // use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\ChatsController;
 use App\Http\Controllers\ExploreController;
 use App\Http\Controllers\FollowsController;
@@ -23,6 +24,11 @@ use App\Http\Controllers\NotificationsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/clear-cache', function() {
+    $exitCode = Artisan::call('config:cache');
+    return 'DONE'; //Return anything
+});
 
 Route::get('/', function () {
     return view('auth.login');
