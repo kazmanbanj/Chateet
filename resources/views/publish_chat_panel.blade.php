@@ -1,7 +1,7 @@
 <div class="border border-blue-400 rounded-lg px-8 py-6 mb-6">
     <form method="POST" action="/chats">
     @csrf
-        <textarea name="body" id="" class="w-full h-24 border rounded focus:outline-none focus:shadow-outline" placeholder="What you got to share?" required></textarea>
+        <textarea name="body" id="" class="w-full h-24 border rounded focus:outline-none focus:shadow-outline" placeholder="What you got to share?" required>{{ old('body') }}</textarea>
 
         <hr class="my-1">
 
