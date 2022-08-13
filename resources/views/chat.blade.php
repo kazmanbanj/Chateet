@@ -3,7 +3,7 @@
         <div class="mr-2 flex-shrink-0">
             <a href="{{ $chat->user->path() }}">
                 {{-- URL::asset('avatars/'. $chat->user->id .'/'. str_replace('http://chateet.herokuapp.com/', '',  --}}
-                <img src="{!! $chat->user->avatar !!}"  class="rounded-full mr-2" style="width:50px; height:50px;">
+                <img src="{!!  $user->avatar ?? URL::asset('images/test1.jpg')  !!}"  class="rounded-full mr-2" style="width:50px; height:50px;">
             </a>
         </div>
 
