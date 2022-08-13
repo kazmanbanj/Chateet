@@ -63,7 +63,7 @@
             "@php artisan key:generate --ansi"
         ],
         "post-install-cmd": [
-            "ln -sr storage/app/public public/avatars"
+            "ln -sr storage/app/public public/avatars", "php artisan clear-compiled", "php artisan config:clear", "php artisan config:cache", "php artisan optimize"
         ]
     }
 }
