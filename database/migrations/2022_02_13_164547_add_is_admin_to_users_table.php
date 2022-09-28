@@ -14,7 +14,7 @@ class AddIsAdminToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->boolean('is_admin')->nullable()->after('email')->default(true);
+            $table->boolean('is_admin')->nullable()->after('email')->default(0);
         });
     }
 
