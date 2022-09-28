@@ -31,7 +31,7 @@ trait Likable
     {
         return $this->like($user, false);
     }
-    
+
     public function isLikedBy(User $user)
     {
         return (bool) $user->likes->where('chat_id', $this->id)->where('liked', true)->count();
