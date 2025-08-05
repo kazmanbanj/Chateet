@@ -1,4 +1,4 @@
-This is a project made with laravel (backend technology), tailwindcss (frontend technology), MYSQL (relational database), TablePlus (database administrative tool). Chateet is a platform where users can interact with one another, follow each other and read latest posts from friends.
+This is a project made with laravel (backend technology), tailwindcss (frontend technology), MYSQL (relational database). Chateet is a platform where users can interact with one another, follow each other and read latest posts from friends.
 
 # https://chateet.herokuapp.com/
 
