@@ -1,6 +1,4 @@
-This is a project made with laravel (backend technology), tailwindcss (frontend technology), MYSQL (relational database). Chateet is a platform where users can interact with one another, follow each other and read latest posts from friends.
-
-# https://chateet.herokuapp.com/
+This is a project made with laravel, tailwindcss, MySQL. Chateet is a platform where users can interact with one another, follow each other and read latest posts from friends.
 
 Run the following commands for cloning on your local machine:
 1. git clone <repo-url>
